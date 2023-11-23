@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Definición de metadatos del documento -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles.css">
+    <title>Juego Rompecabezas</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4206/4206572.png" type="image/png">
+</head>
+<body class="fondo-movil">
+    <h1>Juego Rompecabezas</h1>
+    
+    <!-- Contenedor de las imagenes de referencia para el rompecabezas -->
+    <div id="imagenes-referencia">
+        <img src="https://i.pinimg.com/280x280_RS/8e/9c/37/8e9c37c4d9ac23a3ffa82a1010caaa25.jpg" alt="Referencia Rompecabezas 1">
+        <img src="https://i.pinimg.com/originals/d6/a0/8d/d6a08d18a260148ccd38dbbaf7159e71.png" alt="Referencia Rompecabezas 2">
+    </div>
+
+    <!-- Contenedor de la seleccion de dificultad -->
+    <div id="dificultad">
+        <!-- Etiqueta de texto y menu desplegable para seleccionar la dificultad -->
+        <label for="dificultad-selector">Seleccione la dificultad:</label>
+        <select id="dificultad-selector">
+            <option value="4">Fácil</option>
+            <option value="6">Intermedio</option>
+            <option value="8">Difícil</option>
+        </select>
+    </div>
+    
+    <!-- Contenedor donde se generara el rompecabezas -->
+    <div id="puzzle"></div>
+
+    <!-- Contenedor para mostrar mensajes, como la notificación de completar el rompecabezas -->
+    <div id="mensaje"></div>
+
+    <script src="app.js"></script>
+
+    <!-- Boton para generar un nuevo rompecabezas -->
+    <button id="puzzle-button">Nuevo Rompecabezas</button>  
+</body>
+</html>

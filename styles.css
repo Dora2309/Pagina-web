@@ -1,0 +1,126 @@
+/* Estilos para el cuerpo de la página */
+body {
+    display: flex; /* Establece el modelo de diseño como flexbox. */
+    flex-direction: column;  /* Establece la dirección principal del contenedor flex como columna. */
+    align-items: center; 
+}
+
+/* Estilos para el fondo movil con animación */
+.fondo-movil {
+    background: url('https://www.sitew.com/images/blog/articles/site-jeux/gaming.jpeg') repeat;
+    animation: moverFondo 10s linear infinite;  
+}
+@keyframes moverFondo {
+    from {
+        background-position: 0 0; /* Posicion inicial del fondo de la imagen en (0, 0). */
+    }
+    to {
+        background-position: 100% 0; /* Posicion final del fondo de la imagen en (100%, 0), lo que indica que la imagen se desplazara completamente hacia la derecha. */
+    }
+}
+
+/* Estilos para el titulo del juego con animacion */
+h1 {
+    color: transparent;
+    -webkit-text-stroke: 2px #ffffff; /* Ancho y color del contorno */
+    text-transform: uppercase; 
+    letter-spacing: 4px;
+    font-size: 2.5em;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; 
+    animation: desplazarTexto 2s infinite alternate; 
+}
+@keyframes desplazarTexto {
+    from {
+        transform: translateX(0); /* Posicion inicial de la animacion con ningun desplazamiento horizontal. */
+    }
+    to {
+        transform: translateX(10px); /* Posicion final de la animacion con un desplazamiento horizontal de 10 pixeles hacia la derecha. */
+    }
+}
+
+#imagenes-referencia img {
+    width: 100px; 
+    margin: 4px;
+}
+
+/* Estilos para el contenedor del rompecabezas con sombra y borde degradado */
+#puzzle {
+    margin: 20px;
+    display: grid; /* Establece un contenedor de cuadricula */
+    margin-bottom: 20px; 
+    box-shadow: 0 0 10px #00aeff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #00aeff; 
+}
+
+/* Estilos para cada pieza del rompecabezas */
+.puzzle-piece {
+    width: 75px;
+    height: 75px;
+    border: 3px solid transparent; 
+    border-radius: 5px;
+    cursor: grab; 
+    transition: background-position 0.3s ease-in-out; 
+}
+
+.puzzle-piece:hover {
+    transform: scale(1.1);  
+    border-image: linear-gradient(to right, #800080, #4B0082); 
+    border-image-slice: 1; /* Asegura que el degradado cubra todo el borde */
+}
+
+/* Estilos para el contenedor de mensajes con animación */
+#mensaje {
+    font-family: Arial, sans-serif;
+    -webkit-text-stroke: 1.5px rgb(255, 255, 255); /* Ancho y color del contorno */
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; 
+    animation: cambiarTamaño 3s ease-in-out infinite;
+}
+@keyframes cambiarTamaño {
+    from {
+        transform: scale(1);  /* Establece el tamaño inicial del texto. */
+    }
+    to {
+        transform: scale(1.5);  /* Establece el tamaño final del texto, que es 1.5 veces el tamaño original. */
+    }
+}
+
+/* Estilos para el boton */
+#puzzle-button {
+    background: linear-gradient(to right, #800080, #4B0082); /*Establece el fondo degradado de izquierda a derecha */ 
+    border: none; /* Elimina el borde del boton*/
+    padding: 15px 16px;
+    font-size: 13px;
+    border-radius: 10px;
+    cursor: pointer;  
+    -webkit-text-stroke: 2px #000000; 
+    letter-spacing: 2px;  /* Ajusta el espaciado entre las letras del texto. */
+    text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff; 
+}
+#puzzle-button:hover {
+    transform: scale(1.1); /* Aumenta le tamaño del boton*/
+}
+
+/* Estilos para el contenedor de dificultad con sombra y texto destacado */
+#dificultad {
+    color: rgb(255, 255, 255); 
+    font-weight: bold; /* Grosor */
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff; 
+}
+
+/* Estilos para el selector de dificultad con efectos de color al pasar el raton */
+#dificultad-selector {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #ff00ff;
+    font-weight: bold; 
+    background-color: rgba(75, 0, 130, 0.7); /* Fondo morado oscuro con 70% de opacidad */
+    padding: 10px; /* Añadir relleno para hacerlo mas grande */
+    border: 2px solid rgba(75, 0, 130, 0.7); 
+    border-radius: 8px; 
+    cursor: pointer;
+}
+#dificultad-selector:hover {
+    color: #000000; /*Cambia el color del texto al pasar el raton*/
+    background-color: rgba(0, 128, 117, 0.7); /* Cambia el color de fondo al pasar el raton con 70% de opacidad */
+}
